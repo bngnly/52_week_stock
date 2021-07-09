@@ -1,7 +1,23 @@
+7/9/2021:
+thoughts-maybe make some preproccessing beforehand on things that are seemingly static, such as the stock tickers and thier
+	respective yfinance info. those things dont change that often (marketcap) unless there is a major boom, but i think those 
+	are ok to stray from for now. the goal currently is to convert the yfinance info on all the tickers to perhaps json format
+	as a preprocessing step. this means that maybe you would only have to run this idea once a month??? 
+
+workflow:
+	generate json -> sort via market cap and threshold -> generate csv
+
+running into a ton of issues dealing with json formatting, not sure if i suck or i suck but its not compiling like i thought it
+	would. also realizing that the overhead is dealing with the yfinance api calls. in the end i am making the same amount of 
+	api calls, so i dont think that i am making it any faster by storing things into json. if anything i may be taking more memory
+
 6/17/2021: currently the script takes 11 min for the nasdaq and idk how long for the others, but maybe around 2 hours
 
 get info from nasdaq:
 http://ftp.nasdaqtrader.com/Trader.aspx?id=symbollookup
+
+how to write to json:
+https://stackoverflow.com/questions/56763688/how-to-write-multiple-json-files-in-python
 
 yfinance.Ticker().info
 {'zip': '98052-6399', 'sector': 'Technology', 'fullTimeEmployees': 163000, 

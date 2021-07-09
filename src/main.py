@@ -51,7 +51,7 @@ def generate_stocks(tickers, threshold, marketCap, final_tickers):
 
 # Conduct analysis on Stock Tickers (main)
 def conduct_analysis(datafile, filename, threshold, marketCap, n_procs):
-    tickers = get_tickers_into_array('../input_data/' + datafile)
+    tickers = get_tickers_into_array('../input_data/raw/' + datafile)
     manager = multiprocessing.Manager()
     tickers_wanted = manager.list()
     processes = []

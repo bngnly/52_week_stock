@@ -37,7 +37,7 @@ def meets_threshold(ticker, threshold, marketCap):
         stock = yf.Ticker(ticker)
         #print(stock.info['zip'])
         year_high = stock.info['fiftyTwoWeekHigh']
-        current_price = stock.info['previousClose']
+        current_price = stock.info['previo  usClose']
         mrkt_cp = stock.info['marketCap']
         if marketCap <= mrkt_cp and current_price <= year_high * threshold:
             print(ticker, ' is selected')
